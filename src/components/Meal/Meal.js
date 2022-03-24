@@ -1,15 +1,15 @@
 import React from "react";
 import "./Meal.css";
 
-const Meal = (props) => {
-    const { strMeal, strMealThumb, strArea } = props.meal;
+const Meal = ({ meal, handleOrderBtn }) => {
+    const { strMeal, strMealThumb, strArea } = meal;
     return (
         <div className="meal">
             <img src={strMealThumb} alt="" />
             <div>
                 <h3>{strMeal}</h3>
                 <h4>Cuisine: {strArea}</h4>
-                <button className="cart-btn">Add To Cart</button>
+                <button onClick={() => handleOrderBtn(meal)} className="order-btn">Place Order</button>
             </div>
         </div>
     );

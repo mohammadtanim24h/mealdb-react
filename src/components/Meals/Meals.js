@@ -22,9 +22,10 @@ const Meals = () => {
                     meals.meals?.map(meal => <Meal key={meal.idMeal} meal={meal} handleOrderBtn={handleOrderBtn}></Meal>)
                 }
             </div>
-            <div className="details container">
+            <div className="details-container">
+                <h2 className='title'>Order Summary</h2>
                 {
-                    cart.map(mealDetail => <Details mealDetail={mealDetail}></Details>)
+                    cart.map(mealDetail => <Details key={mealDetail.idMeal} mealDetail={mealDetail}></Details>)
                 }
             </div>
         </div>

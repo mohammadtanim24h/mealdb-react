@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import "./Details.css";
 
-const Details = (props) => {
+const Details = ({ mealDetail }) => {
+    const { strMeal, strYoutube } = mealDetail;
     return (
-        <div>
-            <h2>Hello</h2>
+        <div className="details">
+            <h2>{strMeal}</h2>
+            <a href={strYoutube}>Demo</a>
         </div>
     );
 };

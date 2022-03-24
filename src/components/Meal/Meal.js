@@ -9,6 +9,7 @@ const Meal = (props) => {
             <div>
                 <h3>{strMeal}</h3>
                 <h4>Cuisine: {strArea}</h4>
+                <button className="cart-btn">Add To Cart</button>
             </div>
         </div>
     );
